@@ -16,10 +16,23 @@ module.exports.addQuote = addQuote;
 
 // Find quotes
 function findAllQuotes(callback) {
-MyQuote.find(function(err, quotes) {
+
+
+
+MyQuote.find({
+   // Search Filters
+},
+['text','author'], // Columns to Return
+{
+    skip:0, // Starting Row
+    limit:0, // Ending Row
+    sort:{
+        publishDate: -1 //Sort by Date Added DESC
+    }
+},function(err, quotes) {
   if (err) return console.error(err);
-  callback(quotes);
-});
+    callback(quotes);
+}).limit( 2 );
 }
 
 
