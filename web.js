@@ -20,22 +20,51 @@ app.use(express.bodyParser());
 
 app.get('/', function(req, res){
 	 Quote.findAllQuotes(function(p) {
+	 	for (var i = 0; i < p.length; i++) {
+		   if (p[i].author === ""){
+		   	p[i].author = "Unknown";
+		   };
+		}
     	res.render('overview',{title:"My Blog", quotes:p});
   	});
 });
 
-app.get('/add', function(req, res){
-	res.render('add', {title:"Battle"});
+app.get('/addquote', function(req, res){
+	Quote.getBoards( function(boards){
+		res.render('addquote', {title:"Add Quote", boards:boards});
+	});	
+});
+
+app.get('/addboard', function(req, res){
+	res.render('addboard', {title:"Add Board"});
+});
+
+app.get('/boards', function(req, res){
+	Quote.getBoards(function(boards) {
+		res.render('boards', {title:"Boards", boards:boards});
+	});
 });
 
 app.post('/addsubmit', function(req, res){
-
 	var text = req.body.text;
 	var author = req.body.author;
+	var boardId = req.body.board;
 
-	Quote.addQuote(text, author, function(err, quote) {
+	Quote.addQuote(text, author, boardId, function(err, quote) {
 		  	/// redirect to root
-		  	res.redirect("/");
+		  	res.redirect("/"); 
+  		});		  
+	}
+);
+
+app.post('/addboardsubmit', function(req, res){
+
+	var name = req.body.name;
+	
+
+	Quote.addBoard(name, function(err, quote) {
+		  	/// redirect to root
+		  	res.redirect("/boards");
 		 
   		});		  
 	}
