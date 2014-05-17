@@ -19,6 +19,11 @@ app.use(express.bodyParser());
 
 
 app.get('/', function(req, res){
+    res.render('landing',{title:"xLocos"});
+});
+
+/*
+app.get('/', function(req, res){
 	 Quote.findAllQuotes(function(p) {
 	 	for (var i = 0; i < p.length; i++) {
 		   if (p[i].author === ""){
@@ -71,7 +76,7 @@ app.post('/addboardsubmit', function(req, res){
 );
 
 
-/*
+
 app.get('/', function(req, res){
 	 res.redirect('/showroom');
 });
