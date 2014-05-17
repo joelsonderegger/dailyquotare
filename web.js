@@ -19,7 +19,7 @@ app.use(express.bodyParser());
 
 
 app.get('/', function(req, res){
-    res.render('landing',{title:"xLocos"});
+    res.render('landing',{title:"home"});
 });
 
 /*
