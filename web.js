@@ -22,6 +22,14 @@ app.get('/', function(req, res){
     res.render('landing',{title:"home"});
 });
 
+app.get('/offers', function(req, res){
+    res.render('offers',{title:"Shanghai"});
+});
+
+app.get('/singleoffer', function(req, res){
+    res.render('singleoffer',{title:"Offer"});
+});
+
 /*
 app.get('/', function(req, res){
 	 Quote.findAllQuotes(function(p) {
