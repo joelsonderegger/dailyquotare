@@ -19,6 +19,11 @@ app.use(express.bodyParser());
 
 
 app.get('/', function(req, res){
+    res.render('landing',{title:"xLocos"});
+});
+
+/*
+app.get('/', function(req, res){
 	 Quote.findAllQuotes(function(p) {
     	res.render('overview',{title:"My Blog", quotes:p});
   	});
@@ -42,7 +47,7 @@ app.post('/addsubmit', function(req, res){
 );
 
 
-/*
+
 app.get('/', function(req, res){
 	 res.redirect('/showroom');
 });
