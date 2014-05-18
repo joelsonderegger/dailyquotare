@@ -57,6 +57,7 @@ body {
 .narrow h2 {
   font-size: 18px;
   font-family: 'dinpromedium';
+  line-height: 25px;
 }
 
 .fullwidthimage{
