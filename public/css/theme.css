@@ -43,14 +43,42 @@ body {
   font-family: 'dinpro-regularregular', sans-serif;
 }
 
+.narrow {
+  width: 761px;
+  margin: 0px auto;
+}
+
+.narrow h1 {
+  font-size: 48px;
+  font-family: 'dinpromedium';
+  margin-top: 25px;
+}
+
+.narrow h2 {
+  font-size: 18px;
+  font-family: 'dinpromedium';
+}
+
 .fullwidthimage{
   width: 100%;
-  height: 425px;
+  height: 450px;
   background: url(/img/bgbild.png) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-top: 0px;
+}
+
+.shanghai{
+  width: 100%;
+  height: 450px;
+  background: url(/img/shanghaiguy.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 0px;
 }
 
 .navigation-wrapper{
@@ -74,8 +102,13 @@ ul.nav.navbar-nav li a{
 }
 
 .navbar-inverse {
+  /*
   background-image: -webkit-linear-gradient(top,#fff 0,#ccc 100%);
   background-image: linear-gradient(to bottom,#fff 0,#ccc 100%);
+  */
+  background-image: none;
+  background: rgba(255,255,255,0.60);
+  border-bottom: none;
 }
 
 .logo{
@@ -111,8 +144,8 @@ ul.nav.navbar-nav li a{
 }
 
 .search-wrapper{
-  margin-left: 165px;
-  margin-top: 95px;
+  margin-left: 175px;
+  margin-top: 150px;
 }
 
 .bigtitle{
@@ -133,11 +166,12 @@ ul.nav.navbar-nav li a{
 }
 
 .search-input-wrapper{
-background: rgba(255,255,255,0.60);
-border: 1px solid #FFFFFF;
-border-radius: 5px;
-margin-top: 20px;
-padding: 3px;
+  background: rgba(255,255,255,0.60);
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 3px;
+  width: 567px;
 }
 
 .searchinput{
@@ -162,6 +196,10 @@ padding: 3px;
   margin-right: 5px;
 }
 
+.search-input-wrapper ul li:last-child{
+  margin-right: 0px;
+}
+
 .search-dropdownbutton{
   background: #FFFFFF;
   border: 1px solid #F6F5F5;
@@ -170,6 +208,32 @@ padding: 3px;
   color: #7ED321;
   line-height: 15px;
   height: 40px;
+  width: 90px;
+}
+
+.whatdropdown {
+  width: 100%;
+}
+
+#datepicker {
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  font-family: 'dinpro-regularregular';
+  font-size: 15px;
+  color: #7ED321;
+  line-height: 40px;
+  height: 40px;
+  width: 105px;
+}
+
+#searchbutton {
+  background: #7ED321;
+border: 1px solid #73C11E;
+ font-family: 'dinprobold';
+font-size: 15px;
+color: #FFFFFF;
+line-height: 24px;
+height: 40px;
 }
 
 /* Small devices (tablets, 768px and up) */
