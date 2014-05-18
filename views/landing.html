@@ -4,10 +4,12 @@
     <div class="search-wrapper">
       <p class="bigtitle">Discover yor next xlocos</p>
       <p class="smalltitle">Meet <span class="greenspan">local</span> people for local <span class="greenspan">xlocos</span></p>
+      <form method='post' action='/search' enctype='multipart/form-data' role="form" class="form-inline">
       <div class="search-input-wrapper">
+        
         <ul>
           <li>
-            <input type="text" class="form-control searchinput" placeholder="Where should I go?">
+            <input type="text" class="form-control searchinput" name="place" placeholder="Where should I go?">
           </li>
           <li>
         <div class="dropdown">
@@ -28,11 +30,12 @@
   <input type="text" type="text" class="form-control" id="datepicker" placeholder="When?">
 </li>
 <li>
-  <a href="/offers" role="botton" class="btn btn-primary" id="searchbutton">Search</a>
+  <button type="submit" class="btn btn-primary" id="searchbutton">Search</button>
 </li>
 </ul>
+
 <br style="clear:both"/>
-      </div>
+      </div></form>
     </div>
     
   </div>

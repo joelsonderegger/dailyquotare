@@ -19,14 +19,37 @@ app.use(express.bodyParser());
 
 
 app.get('/', function(req, res){
-    res.render('landing',{title:"home"});
+    res.render('landing',{title:"Home"});
 });
 
-app.get('/offers', function(req, res){
-	//var place = req.params.id.charAt(0).toUpperCase() + string.slice(1);
-	var place = "Shanghai";
-    res.render('offers',{title:place});
+app.get('/offers/:place', function(req, res){
+	var placeraw = req.params.place.toLowerCase();
+	var place = req.params.place.charAt(0).toUpperCase() + req.params.place.slice(1);
+
+	if(placeraw != "shanghai") {
+		placeraw = "paris";
+	}
+
+
+	if(place === "Shanghai"){
+		var subtitle = "Shanghai is the largest Chinese city by population and the largest city proper by population in the world.";
+		var offerspicture = '<img src="/img/offersshanghai.png" style="margin-bottom: 50px; margin-top: 20px;">';
+	}else{
+		var subtitle = "Sorry, there are currently no offers for " + place + ". We are searching hard to create experiences.";
+	}
+
+
+    res.render('offers',{title:place, placeraw:placeraw, subtitle:subtitle, offerspicture: offerspicture});
 });
+
+app.post('/search', function(req, res){
+			var place = req.body.place.toLowerCase();
+			if(place===""){
+				place = "Unknown";
+			}
+		  	res.redirect("/offers/" + place);
+	}
+);
 
 app.get('/singleoffer', function(req, res){
     res.render('singleoffer',{title:"Offer"});
