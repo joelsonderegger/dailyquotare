@@ -39,77 +39,202 @@
 body {
   padding-top: 0px;
   padding-bottom: 30px;
-  background-color: #eeebe4;
+  background-color: #FFFFFF ;
   font-family: 'dinpro-regularregular', sans-serif;
+}
+
+.narrow {
+  width: 761px;
+  margin: 0px auto;
+}
+
+.narrow h1 {
+  font-size: 48px;
+  font-family: 'dinpromedium';
+  margin-top: 25px;
+}
+
+.narrow h2 {
+  font-size: 18px;
+  font-family: 'dinpromedium';
 }
 
 .fullwidthimage{
   width: 100%;
-  height: 425px;
+  height: 450px;
   background: url(/img/bgbild.png) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-top: 0px;
+}
+
+.shanghai{
+  width: 100%;
+  height: 450px;
+  background: url(/img/shanghaiguy.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 0px;
 }
 
 .navigation-wrapper{
   height: 100px;
   width: 100%;
   background-color: red;
+
 }
 
 .navbar {
   border: none;
 }
 
+ul.nav.navbar-nav li a{
+  color: #393c3d;
+  text-shadow:none;
+  font-family: 'dinprobold';
+  font-size: 13px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .navbar-inverse {
-background-image: -webkit-linear-gradient(top,#fff 0,#ccc 100%);
-background-image: linear-gradient(to bottom,#fff 0,#ccc 100%);
+  /*
+  background-image: -webkit-linear-gradient(top,#fff 0,#ccc 100%);
+  background-image: linear-gradient(to bottom,#fff 0,#ccc 100%);
+  */
+  background-image: none;
+  background: rgba(255,255,255,0.60);
+  border-bottom: none;
 }
 
 .logo{
-  height: 50px;
+  margin-top: 3px;
+  height: 45px;
+  margin-right: 20px;
 }
 
-.experiencebutton{
-  height: 20px;
+.navsexperiencebutton, .navpexperiencebutton{
   border-radius: 2px;
+  margin-top: 13px;
+  font-family: 'dinprobold';
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 11px;
+}
+
+.navsexperiencebutton{
+  background: #7ED321;
+  border: 1px solid #74C21E;
+  
+}
+
+.navpexperiencebutton{
   background: #1DAAF4;
   border: 1px solid #2194E0;
-  font-family: 'dinprobold';
-   font-size: 8px;
-  color: #FFFFFF;
-  line-height: 10px;
 }
 
-.searchbutton{
-   
-  /* Rectangle 9: */
-  
-  
-  
- 
-  /* PROVIDE A EXPERIENCE: */
+.navsearchbox {
+  height: 25px;
+  font-size: 11px;
+  margin-top: 6px;
 }
 
-border-radius: 2px;
-/* Rectangle 10: */
-background: #7ED321;
-border: 1px solid #74C21E;
+.search-wrapper{
+  margin-left: 175px;
+  margin-top: 150px;
+}
 
-font-family: DINPro-Bold;
-font-size: 8px;
+.bigtitle{
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'dinpromedium';
+  margin-bottom: 0px;
+}
+
+.smalltitle{
+  color: #ffffff;
+  font-size: 20px; 
+  font-family: 'dinpro-regularregular';
+}
+
+.greenspan{
+  color: #7ED321;
+}
+
+.search-input-wrapper{
+  background: rgba(255,255,255,0.60);
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 3px;
+  width: 567px;
+}
+
+.searchinput{
+  height: 40px;
+  font-size: 15px;
+  width: 275px; 
+  font-family: 'dinpro-regularregular';
+  float: left;
+}
+
+.searchinput:focus{
+  border-color: #7ED321;
+}
+
+.search-input-wrapper ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.search-input-wrapper ul li{
+  float: left;
+  margin-right: 5px;
+}
+
+.search-input-wrapper ul li:last-child{
+  margin-right: 0px;
+}
+
+.search-dropdownbutton{
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  font-family: 'dinpromedium';
+  font-size: 15px;
+  color: #7ED321;
+  line-height: 15px;
+  height: 40px;
+  width: 90px;
+}
+
+.whatdropdown {
+  width: 100%;
+}
+
+#datepicker {
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  font-family: 'dinpro-regularregular';
+  font-size: 15px;
+  color: #7ED321;
+  line-height: 40px;
+  height: 40px;
+  width: 105px;
+}
+
+#searchbutton {
+  background: #7ED321;
+border: 1px solid #73C11E;
+ font-family: 'dinprobold';
+font-size: 15px;
 color: #FFFFFF;
-line-height: 10px;
-/* SEARCH A EXPERIENCE : */
-
-font-family: DINPro-Medium;
-font-size: 10px;
-color: #FFFFFF;
-line-height: 12px;
-/* Diego Martinez: */
-
+line-height: 24px;
+height: 40px;
+}
 
 /* Small devices (tablets, 768px and up) */
  @media (max-width: 767px) { 

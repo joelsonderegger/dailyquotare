@@ -23,7 +23,9 @@ app.get('/', function(req, res){
 });
 
 app.get('/offers', function(req, res){
-    res.render('offers',{title:"Shanghai"});
+	//var place = req.params.id.charAt(0).toUpperCase() + string.slice(1);
+	var place = "Shanghai";
+    res.render('offers',{title:place});
 });
 
 app.get('/singleoffer', function(req, res){
