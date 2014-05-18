@@ -39,7 +39,7 @@
 body {
   padding-top: 0px;
   padding-bottom: 30px;
-  background-color: #eeebe4;
+  background-color: #FFFFFF ;
   font-family: 'dinpro-regularregular', sans-serif;
 }
 
@@ -57,59 +57,120 @@ body {
   height: 100px;
   width: 100%;
   background-color: red;
+
 }
 
 .navbar {
   border: none;
 }
 
+ul.nav.navbar-nav li a{
+  color: #393c3d;
+  text-shadow:none;
+  font-family: 'dinprobold';
+  font-size: 13px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .navbar-inverse {
-background-image: -webkit-linear-gradient(top,#fff 0,#ccc 100%);
-background-image: linear-gradient(to bottom,#fff 0,#ccc 100%);
+  background-image: -webkit-linear-gradient(top,#fff 0,#ccc 100%);
+  background-image: linear-gradient(to bottom,#fff 0,#ccc 100%);
 }
 
 .logo{
-  height: 50px;
+  margin-top: 3px;
+  height: 45px;
+  margin-right: 20px;
 }
 
-.experiencebutton{
-  height: 20px;
+.navsexperiencebutton, .navpexperiencebutton{
   border-radius: 2px;
+  margin-top: 13px;
+  font-family: 'dinprobold';
+  font-size: 11px;
+  color: #FFFFFF;
+  line-height: 11px;
+}
+
+.navsexperiencebutton{
+  background: #7ED321;
+  border: 1px solid #74C21E;
+  
+}
+
+.navpexperiencebutton{
   background: #1DAAF4;
   border: 1px solid #2194E0;
-  font-family: 'dinprobold';
-   font-size: 8px;
-  color: #FFFFFF;
-  line-height: 10px;
 }
 
-.searchbutton{
-   
-  /* Rectangle 9: */
-  
-  
-  
- 
-  /* PROVIDE A EXPERIENCE: */
+.navsearchbox {
+  height: 25px;
+  font-size: 11px;
+  margin-top: 6px;
 }
 
-border-radius: 2px;
-/* Rectangle 10: */
-background: #7ED321;
-border: 1px solid #74C21E;
+.search-wrapper{
+  margin-left: 165px;
+  margin-top: 95px;
+}
 
-font-family: DINPro-Bold;
-font-size: 8px;
-color: #FFFFFF;
-line-height: 10px;
-/* SEARCH A EXPERIENCE : */
+.bigtitle{
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'dinpromedium';
+  margin-bottom: 0px;
+}
 
-font-family: DINPro-Medium;
-font-size: 10px;
-color: #FFFFFF;
-line-height: 12px;
-/* Diego Martinez: */
+.smalltitle{
+  color: #ffffff;
+  font-size: 20px; 
+  font-family: 'dinpro-regularregular';
+}
 
+.greenspan{
+  color: #7ED321;
+}
+
+.search-input-wrapper{
+background: rgba(255,255,255,0.60);
+border: 1px solid #FFFFFF;
+border-radius: 5px;
+margin-top: 20px;
+padding: 3px;
+}
+
+.searchinput{
+  height: 40px;
+  font-size: 15px;
+  width: 275px; 
+  font-family: 'dinpro-regularregular';
+  float: left;
+}
+
+.searchinput:focus{
+  border-color: #7ED321;
+}
+
+.search-input-wrapper ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.search-input-wrapper ul li{
+  float: left;
+  margin-right: 5px;
+}
+
+.search-dropdownbutton{
+  background: #FFFFFF;
+  border: 1px solid #F6F5F5;
+  font-family: 'dinpromedium';
+  font-size: 15px;
+  color: #7ED321;
+  line-height: 15px;
+  height: 40px;
+}
 
 /* Small devices (tablets, 768px and up) */
  @media (max-width: 767px) { 
